@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <Label Content="Adja meg a nevét:"/>
+            <TextBox Text="Bence" />
+            <Label Content="Adja meg a játék tipusát:"/>
+            <RadioButton Content="kő - papír - olló"/>
+            <RadioButton Content="kő - papír - olló - gyík - Spock"/>
+            <Button Content="Játék Indítása" Click="NavigationToGamePage"/>
+        </StackPanel>
+        <Frame x:Name="MainFrame" />
     </Grid>
 </Window>

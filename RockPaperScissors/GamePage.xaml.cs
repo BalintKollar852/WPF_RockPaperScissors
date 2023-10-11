@@ -16,17 +16,17 @@ using System.Windows.Shapes;
 namespace RockPaperScissors
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for GamePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GamePage : Page
     {
-        public MainWindow()
+        public GamePage()
         {
             InitializeComponent();
         }
-        private void NavigationToGamePage(object sender, RoutedEventArgs e)
+        private void NavigationToResultPage(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new GamePage();
+            GameFrame.Content = new ResultPage();
         }
     }
 }
