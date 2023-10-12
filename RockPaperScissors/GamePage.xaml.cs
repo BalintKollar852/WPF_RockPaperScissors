@@ -20,9 +20,11 @@ namespace RockPaperScissors
     /// </summary>
     public partial class GamePage : Page
     {
-        private int round;
+        public static int DrawNumber = 0;
+        public static int WonNumber = 0;
+        public static int LossNumber = 0;
+        private int round = 1;
         private int maxround;
-        private string asd = "GameType1Shapes";
         private List<String> GameType1Shapes = new List<String> { "kő", "papír", "olló" };
         private List<String> GameType2Shapes = new List<String> { "kő", "papír", "olló", "gyík", "Spock" };
         public GamePage()
@@ -45,6 +47,7 @@ namespace RockPaperScissors
                     ListBoxShapes.Items.Add(item);
                 }
             }
+            ResultsButton.IsEnabled = false;
             OKButton.IsEnabled = false;
             OKButton.Content = $"OK {round}/{maxround}";
         }
@@ -60,29 +63,132 @@ namespace RockPaperScissors
         {
             if(ListBoxShapes.SelectedItem != null)
             {
-                round++;
-                OKButton.Content = $"OK {round}/{maxround}";
-                if (round != maxround)
+                
+                if (round <= maxround)
                 {
+                    string results = "";
                     string selectedshape = ListBoxShapes.SelectedItem.ToString();
-                    LabelPlayerName.Content = selectedshape;
                     int randomindex;
                     string randomshape = "";
                     Random rnd = new Random();
+
+                    // Sima kő papír olló
                     if (MainWindow.GameType == 1)
                     {
                         randomindex = rnd.Next(0, GameType1Shapes.Count());
-                        randomshape = GameType1Shapes[randomindex];
+                        randomshape = GameType1Shapes[randomindex]; 
+                        if (selectedshape == randomshape)
+                        {
+                            results = "Döntetlen";
+                        }
+                        else if ((selectedshape == "kő" && randomshape == "olló") ||
+                                 (selectedshape == "papír" && randomshape == "kő") ||
+                                 (selectedshape == "olló" && randomshape == "papír"))
+                        {
+                            results = "Győzelem";
+                        }
+                        else
+                        {
+                            results = "Veszteség";
+                        }
                     }
+
+                    // Kiegészített kő papír olló
                     if (MainWindow.GameType == 2)
                     {
                         randomindex = rnd.Next(0, GameType2Shapes.Count());
-                        randomshape = GameType2Shapes[randomindex];
+                        randomshape = GameType2Shapes[randomindex]; 
+                        if (selectedshape == randomshape)
+                        {
+                            results = "Döntetlen";
+                        }
+                        else if (selectedshape == "kő")
+                        {
+                            if (randomshape == "olló" || randomshape == "gyík")
+                            {
+                                results = $"Győzelem";
+                            }
+                            else
+                            {
+                                results = "Veszteség";
+                            }
+                        }
+                        else if (selectedshape == "papír")
+                        {
+                            if (randomshape == "kő" || randomshape == "Spock")
+                            {
+                                results = $"Győzelem";
+                            }
+                            else
+                            {
+                                results = "Veszteség";
+                            }
+                        }
+                        else if (selectedshape == "olló")
+                        {
+                            if (randomshape == "papír" || randomshape == "gyík")
+                            {
+                                results = $"Győzelem";
+                            }
+                            else
+                            {
+                                results = "Veszteség";
+                            }
+                        }
+                        else if (selectedshape == "gyík")
+                        {
+                            if (randomshape == "papír" || randomshape == "Spock")
+                            {
+                                results = $"Győzelem";
+                            }
+                            else
+                            {
+                                results = "Veszteség";
+                            }
+                        }
+                        else if (selectedshape == "Spock")
+                        {
+                            if (randomshape == "kő" || randomshape == "olló")
+                            {
+                                results = $"Győzelem";
+                            }
+                            else
+                            {
+                                results = "Veszteség";
+                            }
+                        }
                     }
+                    if (!string.IsNullOrEmpty(ResultsBlock.Text))
+                    {
+                        ResultsBlock.Text += "\n";
+                    }
+                    switch (results)
+                    {
+                        case "Döntetlen":
+                            ResultsBlock.Text += $" {round}.kör - {MainWindow.Name}: {selectedshape}, Gép: {randomshape} - Döntetlen.";
+                            DrawNumber++;
+                            break;
+                        case "Győzelem":
+                            ResultsBlock.Text += $" {round}.kör - {MainWindow.Name}: {selectedshape}, Gép: {randomshape} - {MainWindow.Name} nyert.";
+                            WonNumber++;
+                            break;
+                        case "Veszteség":
+                            ResultsBlock.Text += $" {round}.kör - {MainWindow.Name}: {selectedshape}, Gép: {randomshape} - Gép nyert.";
+                            LossNumber++;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                if(round < maxround)
+                {
+                    round++;
+                    OKButton.Content = $"OK {round}/{maxround}";
                 }
                 else
                 {
                     OKButton.IsEnabled = false;
+                    ResultsButton.IsEnabled = true;
                 }
             }
 

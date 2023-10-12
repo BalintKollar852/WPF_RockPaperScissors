@@ -9,11 +9,11 @@
     <Grid>
         <StackPanel>
             <Label x:Name="Label1" Content="Adja meg a nevét:"/>
-            <ComboBox x:Name="ComboBoxName" IsEditable="True" Text="Bence" HorizontalAlignment="Stretch"/>
+            <ComboBox x:Name="ComboBoxName" IsEditable="True" HorizontalAlignment="Stretch" TextBoxBase.TextChanged="ComboBoxName_TextChanged" />
             <Label Content="Adja meg a játék típusát:"/>
             <RadioButton x:Name="GameType1" Content="kő - papír - olló" IsChecked="True"/>
             <RadioButton x:Name="GameType2" Content="kő - papír - olló - gyík - Spock"/>
-            <Button Content="Játék Indítása" Click="NavigationToGamePage" HorizontalAlignment="Right"/>
+            <Button x:Name="GameButton" Content="Játék Indítása" Click="NavigationToGamePage" HorizontalAlignment="Right"/>
         </StackPanel>
         <Frame x:Name="MainFrame" />
     </Grid>

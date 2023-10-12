@@ -9,15 +9,14 @@
       Title="GamePage">
 
     <Grid Background="White">
-
         <StackPanel>
             <Label x:Name="LabelPlayerName"/>
             <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
             <Label Content="Válasszon alakzatot, majd nyomjon OK-t:"/>
             <ListBox x:Name="ListBoxShapes" d:ItemsSource="{d:SampleData ItemCount=5}"  PreviewMouseDown="ListBoxShapes_PreviewMouseDown"/>
             <Button x:Name="OKButton" Content="OK" Click="ShapeOK"/>
-            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-            <Button Content="Eredmények" Click="NavigationToResultPage"/>
+            <TextBlock x:Name="ResultsBlock" TextWrapping="Wrap"/>
+            <Button x:Name="ResultsButton" Content="Eredmények" Click="NavigationToResultPage"/>
         </StackPanel>
         <Frame x:Name="GameFrame" />
     </Grid>

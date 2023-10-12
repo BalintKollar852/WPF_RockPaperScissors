@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,6 +28,18 @@ namespace RockPaperScissors
         public MainWindow()
         {
             InitializeComponent();
+            GameButton.IsEnabled = false;
+        }
+        private void ComboBoxName_TextChanged(object sender, EventArgs e)
+        {
+          if (ComboBoxName.Text.Length > 0 && Regex.IsMatch(ComboBoxName.Text, @"^[a-zA-Z]+$"))
+            {
+                GameButton.IsEnabled = true;
+            }
+            else
+            {
+                GameButton.IsEnabled = false;
+            }
         }
         private void NavigationToGamePage(object sender, RoutedEventArgs e)
         {
