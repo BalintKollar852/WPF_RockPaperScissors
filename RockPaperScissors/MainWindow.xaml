@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RockPaperScissors"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="800">
     <Grid>
         <StackPanel>
-            <Label Content="Adja meg a nevét:"/>
-            <TextBox Text="Bence" />
-            <Label Content="Adja meg a játék tipusát:"/>
-            <RadioButton Content="kő - papír - olló"/>
-            <RadioButton Content="kő - papír - olló - gyík - Spock"/>
-            <Button Content="Játék Indítása" Click="NavigationToGamePage"/>
+            <Label x:Name="Label1" Content="Adja meg a nevét:"/>
+            <ComboBox x:Name="ComboBoxName" IsEditable="True" Text="Bence" HorizontalAlignment="Stretch"/>
+            <Label Content="Adja meg a játék típusát:"/>
+            <RadioButton x:Name="GameType1" Content="kő - papír - olló" IsChecked="True"/>
+            <RadioButton x:Name="GameType2" Content="kő - papír - olló - gyík - Spock"/>
+            <Button Content="Játék Indítása" Click="NavigationToGamePage" HorizontalAlignment="Right"/>
         </StackPanel>
         <Frame x:Name="MainFrame" />
     </Grid>

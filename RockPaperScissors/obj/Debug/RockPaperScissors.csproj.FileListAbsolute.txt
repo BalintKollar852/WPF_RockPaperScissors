@@ -18,3 +18,22 @@ C:\Users\balin\OneDrive\Dokumentumok\GitHub\WPF_RockPaperScissors2\RockPaperScis
 C:\Users\balin\OneDrive\Dokumentumok\GitHub\WPF_RockPaperScissors2\RockPaperScissors\obj\Debug\RockPaperScissors.csproj.CoreCompileInputs.cache
 C:\Users\balin\OneDrive\Dokumentumok\GitHub\WPF_RockPaperScissors2\RockPaperScissors\obj\Debug\RockPaperScissors.exe
 C:\Users\balin\OneDrive\Dokumentumok\GitHub\WPF_RockPaperScissors2\RockPaperScissors\obj\Debug\RockPaperScissors.pdb
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\bin\Debug\RockPaperScissors.exe.config
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\bin\Debug\RockPaperScissors.exe
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\bin\Debug\RockPaperScissors.pdb
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.csproj.AssemblyReference.cache
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\GamePage.g.cs
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\MainWindow.g.cs
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\ResultPage.g.cs
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\App.g.cs
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors_MarkupCompile.cache
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors_MarkupCompile.lref
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\GamePage.baml
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\MainWindow.baml
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\ResultPage.baml
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.g.resources
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.Properties.Resources.resources
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.csproj.GenerateResource.cache
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.csproj.CoreCompileInputs.cache
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.exe
+G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.pdb
