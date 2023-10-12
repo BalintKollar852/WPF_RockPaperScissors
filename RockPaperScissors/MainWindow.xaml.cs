@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
@@ -17,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace RockPaperScissors
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public static string Name;
@@ -29,6 +27,12 @@ namespace RockPaperScissors
         {
             InitializeComponent();
             GameButton.IsEnabled = false;
+            string fullPath = $"jatekosok.txt";
+            foreach (string sor in File.ReadAllLines(@"jatekosok.txt"))
+            {
+                string[] s = sor.Split(';');
+                ComboBoxName.Items.Add(s[0]);
+            }
         }
         private void ComboBoxName_TextChanged(object sender, EventArgs e)
         {

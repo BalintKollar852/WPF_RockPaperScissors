@@ -59,10 +59,6 @@ namespace RockPaperScissors
                     GameResults.Text += "Gép";
                 }
             }
-
-
-            
-            
             List<Jatekosok> jatekosoklist = new List<Jatekosok>();
             string fullPath = $"jatekosok.txt";
             foreach (string sor in File.ReadAllLines(@"jatekosok.txt")) {
@@ -76,21 +72,20 @@ namespace RockPaperScissors
                 {
                     case "Döntetlen":
                         sorok.Add($"{MainWindow.Name};{jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.WonGame).SingleOrDefault()};{jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.LostGame).SingleOrDefault()};{jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.DrawGame).SingleOrDefault() + 1}");
-                        PlayerPreviousResults.Text = $"Nyert játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.WonGame).SingleOrDefault()}\n Vesztett játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.LostGame).SingleOrDefault()}\n Döntetlen játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.DrawGame).SingleOrDefault() + 1}";
+                        PlayerPreviousResults.Text = $" Nyert játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.WonGame).SingleOrDefault()}\n Vesztett játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.LostGame).SingleOrDefault()}\n Döntetlen játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.DrawGame).SingleOrDefault() + 1}";
                         break;
                     case "Nyert":
                         sorok.Add($"{MainWindow.Name};{jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.WonGame).SingleOrDefault() + 1};{jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.LostGame).SingleOrDefault()};{jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.DrawGame).SingleOrDefault()}");
-                        PlayerPreviousResults.Text = $"Nyert játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.WonGame).SingleOrDefault() + 1}\n Vesztett játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.LostGame).SingleOrDefault()}\n Döntetlen játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.DrawGame).SingleOrDefault()}";
+                        PlayerPreviousResults.Text = $" Nyert játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.WonGame).SingleOrDefault() + 1}\n Vesztett játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.LostGame).SingleOrDefault()}\n Döntetlen játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.DrawGame).SingleOrDefault()}";
                         break;
                     case "Vesztett":
                         sorok.Add($"{MainWindow.Name};{jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.WonGame).SingleOrDefault()};{jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.LostGame).SingleOrDefault() + 1};{jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.DrawGame).SingleOrDefault()}");
-                        PlayerPreviousResults.Text = $"Nyert játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.WonGame).SingleOrDefault()}\n Vesztett játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.LostGame).SingleOrDefault() + 1}\n Döntetlen játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.DrawGame).SingleOrDefault()}";
+                        PlayerPreviousResults.Text = $" Nyert játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.WonGame).SingleOrDefault()}\n Vesztett játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.LostGame).SingleOrDefault() + 1}\n Döntetlen játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.DrawGame).SingleOrDefault()}";
                         break;
                     default:
                         break;
                 }
                 File.WriteAllLines(fullPath, sorok);
-
             }
             else
             {
@@ -100,23 +95,21 @@ namespace RockPaperScissors
                 {
                     case "Döntetlen":
                         sorok.Add($"{MainWindow.Name};{0};{0};{1}");
-                        PlayerPreviousResults.Text = $"Nyert játékok száma: 0\n Vesztett játékok száma: 0\n Döntetlen játékok száma: 1";
+                        PlayerPreviousResults.Text = $" Nyert játékok száma: 0\n Vesztett játékok száma: 0\n Döntetlen játékok száma: 1";
                         break;
                     case "Nyert":
                         sorok.Add($"{MainWindow.Name};{1};{0};{0}");
-                        PlayerPreviousResults.Text = $"Nyert játékok száma: 1\n Vesztett játékok száma: 0\n Döntetlen játékok száma: 0";
+                        PlayerPreviousResults.Text = $" Nyert játékok száma: 1\n Vesztett játékok száma: 0\n Döntetlen játékok száma: 0";
                         break;
                     case "Vesztett":
                         sorok.Add($"{MainWindow.Name};{0};{1};{0}");
-                        PlayerPreviousResults.Text = $"Nyert játékok száma: 0\n Vesztett játékok száma: 1\n Döntetlen játékok száma: 0";
+                        PlayerPreviousResults.Text = $" Nyert játékok száma: 0\n Vesztett játékok száma: 1\n Döntetlen játékok száma: 0";
                         break;
                     default:
                         break;
                 }
                 File.WriteAllLines(fullPath, sorok);
             }
-
-
         }
     }
 }

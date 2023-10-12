@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace RockPaperScissors
 {
-    /// <summary>
-    /// Interaction logic for GamePage.xaml
-    /// </summary>
     public partial class GamePage : Page
     {
         public static int DrawNumber = 0;
@@ -31,7 +29,17 @@ namespace RockPaperScissors
         {
             InitializeComponent();
             LabelPlayerName.Content = MainWindow.Name + " eddigi eredményei:";
-            if(MainWindow.GameType == 1)
+            List<Jatekosok> jatekosoklist = new List<Jatekosok>();
+            string fullPath = $"jatekosok.txt";
+            foreach (string sor in File.ReadAllLines(@"jatekosok.txt"))
+            {
+                jatekosoklist.Add(new Jatekosok(sor));
+            }
+            if (Convert.ToInt32(jatekosoklist.Where(a => a.Nev == MainWindow.Name).Count()) >= 1)
+            {
+                PlayerPreviousResults.Text = $" Nyert játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.WonGame).SingleOrDefault()}\n Vesztett játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.LostGame).SingleOrDefault()}\n Döntetlen játékok száma: {jatekosoklist.Where(j => j.Nev == MainWindow.Name).Select(j => j.DrawGame).SingleOrDefault()}";
+            }
+            if (MainWindow.GameType == 1)
             {
                 maxround = GameType1Shapes.Count();
                 foreach(var item in GameType1Shapes)
@@ -191,7 +199,6 @@ namespace RockPaperScissors
                     ResultsButton.IsEnabled = true;
                 }
             }
-
         }
         private void NavigationToResultPage(object sender, RoutedEventArgs e)
         {
