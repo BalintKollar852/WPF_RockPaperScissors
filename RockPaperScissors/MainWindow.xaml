@@ -5,16 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RockPaperScissors"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="800">
+        Title="RockPaperScissors" Height="225" Width="800"
+        Icon="Peace.png">
     <Grid>
-        <StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" VerticalAlignment="Center">
             <Label x:Name="Label1" Content="Adja meg a nevét:"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
             <ComboBox x:Name="ComboBoxName" IsEditable="True" HorizontalAlignment="Stretch" TextBoxBase.TextChanged="ComboBoxName_TextChanged" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" VerticalAlignment="Center">
             <Label Content="Adja meg a játék típusát:"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" VerticalAlignment="Center">
             <RadioButton x:Name="GameType1" Content="kő - papír - olló" IsChecked="True"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" VerticalAlignment="Center">
             <RadioButton x:Name="GameType2" Content="kő - papír - olló - gyík - Spock"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" VerticalAlignment="Top" Margin="0,0,10,0">
             <Button x:Name="GameButton" Content="Játék Indítása" Click="NavigationToGamePage" HorizontalAlignment="Right"/>
         </StackPanel>
-        <Frame x:Name="MainFrame" />
+        <Frame x:Name="MainFrame" Grid.RowSpan="6"/>
     </Grid>
 </Window>

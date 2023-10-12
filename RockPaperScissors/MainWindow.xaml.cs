@@ -56,6 +56,7 @@ namespace RockPaperScissors
             {
                 GameType = 2;
             }
+            Height = 500;
             MainFrame.Content = new GamePage();
         }
     }
