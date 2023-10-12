@@ -104,4 +104,38 @@ namespace RockPaperScissors {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+        void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
+            switch (connectionId)
+            {
+            case 1:
+            this.Label1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 2:
+            this.ComboBoxName = ((System.Windows.Controls.ComboBox)(target));
+            return;
+            case 3:
+            this.GameType1 = ((System.Windows.Controls.RadioButton)(target));
+            return;
+            case 4:
+            this.GameType2 = ((System.Windows.Controls.RadioButton)(target));
+            return;
+            case 5:
+            
+            #line 16 "..\..\MainWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.NavigationToGamePage);
+            
+            #line default
+            #line hidden
+            return;
+            case 6:
+            this.MainFrame = ((System.Windows.Controls.Frame)(target));
+            return;
+            }
+            this._contentLoaded = true;
+        }
+    }
+}
+

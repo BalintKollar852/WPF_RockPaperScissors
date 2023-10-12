@@ -20,15 +20,18 @@ namespace RockPaperScissors
     /// </summary>
     public partial class GamePage : Page
     {
+        private int round;
+        private int maxround;
+        private string asd = "GameType1Shapes";
+        private List<String> GameType1Shapes = new List<String> { "kő", "papír", "olló" };
+        private List<String> GameType2Shapes = new List<String> { "kő", "papír", "olló", "gyík", "Spock" };
         public GamePage()
         {
             InitializeComponent();
             LabelPlayerName.Content = MainWindow.Name + " eddigi eredményei:";
-            List<String> GameType1Shapes = new List<String>{"kő", "papír", "olló"};
-            List<String> GameType2Shapes = new List<String>{"kő", "papír", "olló", "gyík", "Spock"};
             if(MainWindow.GameType == 1)
             {
-
+                maxround = GameType1Shapes.Count();
                 foreach(var item in GameType1Shapes)
                 {
                     ListBoxShapes.Items.Add(item);
@@ -36,16 +39,52 @@ namespace RockPaperScissors
             }
             if (MainWindow.GameType == 2)
             {
+                maxround = GameType2Shapes.Count();
                 foreach (var item in GameType2Shapes)
                 {
                     ListBoxShapes.Items.Add(item);
                 }
             }
+            OKButton.IsEnabled = false;
+            OKButton.Content = $"OK {round}/{maxround}";
+        }
+        private void ListBoxShapes_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var item = ItemsControl.ContainerFromElement(sender as ListBox, e.OriginalSource as DependencyObject) as ListBoxItem;
+            if (item != null && round != maxround)
+            {
+                OKButton.IsEnabled = true;
+            }
         }
         private void ShapeOK(object sender, RoutedEventArgs e)
         {
-            string selectedshape = ListBoxShapes.SelectedItem.ToString();
-            Random rnd = new Random();
+            if(ListBoxShapes.SelectedItem != null)
+            {
+                round++;
+                OKButton.Content = $"OK {round}/{maxround}";
+                if (round != maxround)
+                {
+                    string selectedshape = ListBoxShapes.SelectedItem.ToString();
+                    LabelPlayerName.Content = selectedshape;
+                    int randomindex;
+                    string randomshape = "";
+                    Random rnd = new Random();
+                    if (MainWindow.GameType == 1)
+                    {
+                        randomindex = rnd.Next(0, GameType1Shapes.Count());
+                        randomshape = GameType1Shapes[randomindex];
+                    }
+                    if (MainWindow.GameType == 2)
+                    {
+                        randomindex = rnd.Next(0, GameType2Shapes.Count());
+                        randomshape = GameType2Shapes[randomindex];
+                    }
+                }
+                else
+                {
+                    OKButton.IsEnabled = false;
+                }
+            }
 
         }
         private void NavigationToResultPage(object sender, RoutedEventArgs e)

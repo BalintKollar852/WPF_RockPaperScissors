@@ -37,3 +37,23 @@ G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj
 G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.csproj.CoreCompileInputs.cache
 G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.exe
 G:\Saját meghajtó\Programozás\WPF\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.pdb
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\bin\Debug\RockPaperScissors.exe.config
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\bin\Debug\RockPaperScissors.exe
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\bin\Debug\RockPaperScissors.pdb
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.csproj.AssemblyReference.cache
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.csproj.SuggestedBindingRedirects.cache
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\GamePage.g.cs
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\MainWindow.g.cs
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\ResultPage.g.cs
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\App.g.cs
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors_MarkupCompile.cache
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors_MarkupCompile.lref
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\GamePage.baml
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\MainWindow.baml
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\ResultPage.baml
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.g.resources
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.Properties.Resources.resources
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.csproj.GenerateResource.cache
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.csproj.CoreCompileInputs.cache
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.exe
+C:\Users\kollar.balint_csany-\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.pdb
