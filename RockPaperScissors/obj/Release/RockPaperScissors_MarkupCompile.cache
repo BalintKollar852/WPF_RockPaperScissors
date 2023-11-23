@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\nemeth.csaba_csany-z\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Debug\
+C:\Users\nemeth.csaba_csany-z\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\obj\Release\
 RockPaperScissors
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\nemeth.csaba_csany-z\Documents\GitHub\WPF_RockPaperScissors\RockPaperScissors\App.xaml
 31487468292
 
@@ -16,5 +16,5 @@ C:\Users\nemeth.csaba_csany-z\Documents\GitHub\WPF_RockPaperScissors\RockPaperSc
 13-38814620
 GamePage.xaml;MainWindow.xaml;ResultPage.xaml;
 
-False
+True
 
