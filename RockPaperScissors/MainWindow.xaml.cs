@@ -36,7 +36,7 @@ namespace RockPaperScissors
         }
         private void ComboBoxName_TextChanged(object sender, EventArgs e)
         {
-          if (ComboBoxName.Text.Length > 0 && Regex.IsMatch(ComboBoxName.Text, @"^[a-zA-Z]+$"))
+          if (ComboBoxName.Text.Length > 0 && Regex.IsMatch(ComboBoxName.Text, @"^[a-záéúőóüö A-ZZÁÉÚŐÓÜÖÍ]+$"))
             {
                 GameButton.IsEnabled = true;
             }

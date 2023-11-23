@@ -1,1 +1,4 @@
-asd;11;11;5
+Csabi;0;0;1
+szarosagatyam;0;0;1
+asd;11;12;5
+asdad;0;2;0
