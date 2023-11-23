@@ -1,4 +1,7 @@
 Csabi;0;0;1
 szarosagatyam;0;0;1
-asd;11;12;5
-asdad;0;2;0
+mkutasd;1;0;0
+fellner;0;0;1
+asd;12;13;5
+asdadaad;1;0;0
+asdad;0;3;1

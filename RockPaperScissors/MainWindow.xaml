@@ -5,34 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RockPaperScissors"
         mc:Ignorable="d"
-        Title="RockPaperScissors" Height="225" Width="800" MinHeight="325" MinWidth="500"
+        Title="RockPaperScissors" Height="225" Width="800" MinHeight="200" MinWidth="600"
         Icon="Peace.png">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+    <Viewbox>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" VerticalAlignment="Center">
+        <StackPanel Grid.Row="0" >
             <Label x:Name="Label1" Content="Adja meg a nevét:"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+        <StackPanel Grid.Row="1">
             <ComboBox x:Name="ComboBoxName" IsEditable="True" HorizontalAlignment="Stretch" TextBoxBase.TextChanged="ComboBoxName_TextChanged" />
         </StackPanel>
-        <StackPanel Grid.Row="2" VerticalAlignment="Center">
+        <StackPanel Grid.Row="2">
             <Label Content="Adja meg a játék típusát:"/>
         </StackPanel>
-        <StackPanel Grid.Row="3" VerticalAlignment="Center">
+        <StackPanel Grid.Row="3">
             <RadioButton x:Name="GameType1" Content="kő - papír - olló" IsChecked="True"/>
-            <RadioButton Margin="0,20,0,0"  x:Name="GameType2" Content="kő - papír - olló - gyík - Spock"/>
+            <RadioButton  x:Name="GameType2" Content="kő - papír - olló - gyík - Spock"/>
         </StackPanel>
-        <StackPanel Grid.Row="5" VerticalAlignment="Top" Margin="0,0,10,0">
+        <StackPanel Grid.Row="5" Margin="0,0,10,0">
             <Button x:Name="GameButton" Content="Játék Indítása" Click="NavigationToGamePage" HorizontalAlignment="Right"/>
         </StackPanel>
         <Frame x:Name="MainFrame" Grid.RowSpan="6"/>
-    </Grid>
+        </Grid>
+    </Viewbox>
 </Window>
