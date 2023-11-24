@@ -114,5 +114,12 @@
   <ItemGroup>
     <Resource Include="vs.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="gyík.png" />
+    <Resource Include="kő.png" />
+    <Resource Include="olló.png" />
+    <Resource Include="papír.png" />
+    <Resource Include="Spock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -176,7 +176,7 @@ namespace RockPaperScissors
                         ResultsBlock.Text += "\n";
                     }
                     selectedImage.Source = new BitmapImage(new Uri($"{selectedshape}.png", UriKind.RelativeOrAbsolute));
-                    randomImage.Source = new BitmapImage(new Uri($"gyík.png", UriKind.RelativeOrAbsolute));
+                    randomImage.Source = new BitmapImage(new Uri($"{randomshape}.png", UriKind.RelativeOrAbsolute));
                     vsImage.Source = new BitmapImage(new Uri($"vs.png", UriKind.RelativeOrAbsolute));
                     switch (results)
                     {
