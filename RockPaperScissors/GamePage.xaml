@@ -17,11 +17,14 @@
             <Button x:Name="OKButton" Content="OK" Click="ShapeOK"/>
             <TextBlock x:Name="ResultsBlock" TextWrapping="Wrap"/>
             <Button x:Name="ResultsButton" Content="Eredmények" Click="NavigationToResultPage"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Image x:Name="selectedImage" Height="101" Margin="0, 0, 45, 0" Width="207"></Image>
-                <Image x:Name="vsImage" Height="101" Margin="0, 0, 45, 0" Width="207"></Image>
-                <Image x:Name="randomImage" Height="101" Width="207"></Image>
-            </StackPanel>
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image x:Name="selectedImage" Height="101" Margin="0, 0, 45, 0" Width="207"></Image>
+                    <Image x:Name="vsImage" Height="101" Margin="0, 0, 45, 0" Width="207"></Image>
+                    <Image x:Name="randomImage" Height="101" Width="207"></Image>
+                </StackPanel>
+                <Image x:Name="loseImage" Height="101" Width="207"></Image>
+            </Grid>
             <Label HorizontalAlignment="Center" Content="" x:Name="winLabel" FontWeight="Bold" FontSize="25"></Label>
         </StackPanel>
         <Frame x:Name="GameFrame" />

@@ -188,11 +188,15 @@ namespace RockPaperScissors
                         case "Győzelem":
                             ResultsBlock.Text += $" {round}.kör - {MainWindow.Name}: {selectedshape}, Gép: {randomshape} - {MainWindow.Name} nyert.";
                             winLabel.Content = $"A kört nyerte {selectedshape}({MainWindow.Name}).";
+                            loseImage.Source = new BitmapImage(new Uri($"lose.png", UriKind.RelativeOrAbsolute));
+                            loseImage.Margin = selectedImage.Margin;
                             WonNumber++;
                             break;
                         case "Veszteség":
                             ResultsBlock.Text += $" {round}.kör - {MainWindow.Name}: {selectedshape}, Gép: {randomshape} - Gép nyert.";
                             winLabel.Content = $"A kört nyerte {randomshape} (Gép).";
+                            loseImage.Source = new BitmapImage(new Uri($"lose.png", UriKind.RelativeOrAbsolute));
+                            loseImage.Margin = randomImage.Margin;
                             LossNumber++;
                             break;
                         default:
