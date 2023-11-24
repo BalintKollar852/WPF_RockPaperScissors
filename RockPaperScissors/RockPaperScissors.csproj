@@ -112,19 +112,7 @@
     <Resource Include="Peace.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ko.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="papir.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="ollo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="gyik.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="szpok.png" />
+    <Resource Include="vs.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

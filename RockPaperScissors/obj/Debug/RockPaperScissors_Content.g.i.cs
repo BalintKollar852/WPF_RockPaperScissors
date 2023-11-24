@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("szpok.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("vs.png")]
 
 

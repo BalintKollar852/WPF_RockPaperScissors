@@ -2,6 +2,10 @@ Csabi;0;0;1
 szarosagatyam;0;0;1
 mkutasd;1;0;0
 fellner;0;0;1
-asdadaad;1;0;0
 asdad;0;3;1
 asd;13;13;5
+qwe;0;1;0
+wer;0;1;0
+wef;0;1;0
+kaki;0;1;0
+asdadaad;1;1;0

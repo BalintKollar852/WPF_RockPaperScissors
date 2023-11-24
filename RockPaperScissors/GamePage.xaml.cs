@@ -102,6 +102,8 @@ namespace RockPaperScissors
                         string uribegin2 = "C:\\Users\\nemeth.csaba_csany-z\\Documents\\GitHub\\WPF_RockPaperScissors\\RockPaperScissors\\bin\\Debug\\Images\\";
                         selectedImage.Source = new BitmapImage(new Uri($"{uribegin2}{selectedshape}.png"));
                         randomImage.Source = new BitmapImage(new Uri($"{uribegin2}{randomshape}.png"));
+                        vsImage.Source = new BitmapImage(new Uri($"{uribegin2}vs.png"));
+
                     }
 
                     // Kiegészített kő papír olló
@@ -173,21 +175,24 @@ namespace RockPaperScissors
                     {
                         ResultsBlock.Text += "\n";
                     }
-                    string uribegin = "C:\\Users\\nemeth.csaba_csany-z\\Documents\\GitHub\\WPF_RockPaperScissors\\RockPaperScissors\\bin\\Debug\\Images\\";
-                    selectedImage.Source = new BitmapImage(new Uri($"{uribegin}{selectedshape}.png"));
-                    randomImage.Source = new BitmapImage(new Uri($"{uribegin}{randomshape}.png"));
+                    selectedImage.Source = new BitmapImage(new Uri($"{selectedshape}.png", UriKind.RelativeOrAbsolute));
+                    randomImage.Source = new BitmapImage(new Uri($"gyík.png", UriKind.RelativeOrAbsolute));
+                    vsImage.Source = new BitmapImage(new Uri($"vs.png", UriKind.RelativeOrAbsolute));
                     switch (results)
                     {
                         case "Döntetlen":
                             ResultsBlock.Text += $" {round}.kör - {MainWindow.Name}: {selectedshape}, Gép: {randomshape} - Döntetlen.";
+                            winLabel.Content = $"A kör eredménye {results}.";
                             DrawNumber++;
                             break;
                         case "Győzelem":
                             ResultsBlock.Text += $" {round}.kör - {MainWindow.Name}: {selectedshape}, Gép: {randomshape} - {MainWindow.Name} nyert.";
+                            winLabel.Content = $"A kört nyerte {selectedshape}({MainWindow.Name}).";
                             WonNumber++;
                             break;
                         case "Veszteség":
                             ResultsBlock.Text += $" {round}.kör - {MainWindow.Name}: {selectedshape}, Gép: {randomshape} - Gép nyert.";
+                            winLabel.Content = $"A kört nyerte {randomshape} (Gép).";
                             LossNumber++;
                             break;
                         default:
