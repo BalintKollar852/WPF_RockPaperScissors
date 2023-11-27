@@ -121,5 +121,8 @@
     <Resource Include="papír.png" />
     <Resource Include="Spock.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="lose.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

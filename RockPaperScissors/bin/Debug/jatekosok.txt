@@ -9,3 +9,4 @@ wer;0;1;0
 wef;0;1;0
 kaki;0;1;0
 asdadaad;1;1;0
+asdasd;0;1;0

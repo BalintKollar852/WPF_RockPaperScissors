@@ -183,20 +183,23 @@ namespace RockPaperScissors
                         case "Döntetlen":
                             ResultsBlock.Text += $" {round}.kör - {MainWindow.Name}: {selectedshape}, Gép: {randomshape} - Döntetlen.";
                             winLabel.Content = $"A kör eredménye {results}.";
+                            loseImage.Visibility = Visibility.Collapsed;
                             DrawNumber++;
                             break;
                         case "Győzelem":
                             ResultsBlock.Text += $" {round}.kör - {MainWindow.Name}: {selectedshape}, Gép: {randomshape} - {MainWindow.Name} nyert.";
                             winLabel.Content = $"A kört nyerte {selectedshape}({MainWindow.Name}).";
                             loseImage.Source = new BitmapImage(new Uri($"lose.png", UriKind.RelativeOrAbsolute));
-                            loseImage.Margin = selectedImage.Margin;
+                            loseImage.Visibility = Visibility.Visible;
+                            loseImage.HorizontalAlignment = HorizontalAlignment.Right;
                             WonNumber++;
                             break;
                         case "Veszteség":
                             ResultsBlock.Text += $" {round}.kör - {MainWindow.Name}: {selectedshape}, Gép: {randomshape} - Gép nyert.";
                             winLabel.Content = $"A kört nyerte {randomshape} (Gép).";
                             loseImage.Source = new BitmapImage(new Uri($"lose.png", UriKind.RelativeOrAbsolute));
-                            loseImage.Margin = randomImage.Margin;
+                            loseImage.Visibility = Visibility.Visible;
+                            loseImage.HorizontalAlignment = HorizontalAlignment.Left;
                             LossNumber++;
                             break;
                         default:
