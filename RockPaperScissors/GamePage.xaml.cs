@@ -99,10 +99,6 @@ namespace RockPaperScissors
                         {
                             results = "Veszteség";
                         }
-                        string uribegin2 = "C:\\Users\\nemeth.csaba_csany-z\\Documents\\GitHub\\WPF_RockPaperScissors\\RockPaperScissors\\bin\\Debug\\Images\\";
-                        selectedImage.Source = new BitmapImage(new Uri($"{uribegin2}{selectedshape}.png"));
-                        randomImage.Source = new BitmapImage(new Uri($"{uribegin2}{randomshape}.png"));
-                        vsImage.Source = new BitmapImage(new Uri($"{uribegin2}vs.png"));
 
                     }
 

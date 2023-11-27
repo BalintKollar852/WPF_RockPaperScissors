@@ -96,16 +96,3 @@ namespace RockPaperScissors {
             {
             case 1:
             this.GameResults = ((System.Windows.Controls.TextBlock)(target));
-            return;
-            case 2:
-            this.PlayerLabel = ((System.Windows.Controls.Label)(target));
-            return;
-            case 3:
-            this.PlayerPreviousResults = ((System.Windows.Controls.TextBlock)(target));
-            return;
-            }
-            this._contentLoaded = true;
-        }
-    }
-}
-
